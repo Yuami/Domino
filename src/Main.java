@@ -1,11 +1,10 @@
-import Partida.Fichas.Bolsa;
+import Partida.TipoPartidas.Clasico;
+import Partida.TipoPartidas.Partida;
 
 public class Main {
 
     public static void main(String[] args) {
-        Bolsa bolsa = new Bolsa(6);
+        Partida clasico = new Clasico(6, 100);
 
-        System.out.println(bolsa);
-        System.out.println(bolsa.getTotalFichas());
     }
 }

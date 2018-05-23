@@ -1,7 +1,7 @@
 package Partida.Jugadores;
 
 public enum Modalidad {
-    INDIVIDUAL(1), PAREJAS(2), EQUIPO(6);
+    INDIVIDUAL(1), PAREJAS(2), EQUIPO(3);
 
     private int cantidadJugadores;
 
@@ -9,7 +9,7 @@ public enum Modalidad {
         this.cantidadJugadores = cantidadJugadores;
     }
 
-    public int getCantidadJugadores() {
+    public int getJugadores() {
         return cantidadJugadores;
     }
 }

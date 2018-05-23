@@ -1,14 +1,13 @@
 package Partida.TipoPartidas;
 
 import Partida.Jugadores.Equipo;
-import Partida.Jugadores.Modalidad;
 
-public class Mexicano extends Partida {
+public class Ponce extends Partida {
 
     private static final int maximoFichas = 6;
 
-    public Mexicano(int objetivo, Modalidad modalidad){
-        super(objetivo, maximoFichas);
+    public Ponce(int objetivo) {
+        super(maximoFichas, objetivo);
     }
 
     @Override
