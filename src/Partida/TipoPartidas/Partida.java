@@ -1,5 +1,6 @@
 package Partida.TipoPartidas;
 
+import Partida.Jugadores.Equipo;
 import Partida.Jugadores.Jugador;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 public abstract class Partida {
     private int turno = 0;
     private List<Jugador> jugadores = new ArrayList<>();
-    private Jugador[][] equipos;
+    private List<Equipo> equipos = new ArrayList<>();
 
 
     public Partida(int totalJugadores, boolean porEquipos){
@@ -20,8 +21,6 @@ public abstract class Partida {
     }
 
     public Partida(Jugador[][] equipos){
-        this.equipos = equipos;
-
         for (int i = 0; i < equipos.length; i++)
             for (int j = 0; j < equipos[0].length; j++) {
                 int index = i * equipos.length + j;
@@ -30,9 +29,7 @@ public abstract class Partida {
     }
 
     private void generarEquipos(){
-        equipos = new Jugador[2][jugadores.size()/2];
-        for (int i = 0; i < jugadores.size(); i++)
-            equipos[i%2][i] = jugadores.get(i);
+
     }
 
     public Jugador[] getJugadores(){

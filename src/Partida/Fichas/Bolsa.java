@@ -1,8 +1,4 @@
-package Partida;
-
-import Partida.Fichas.Casilla;
-import Partida.Fichas.Ficha;
-import Partida.Fichas.Tipos;
+package Partida.Fichas;
 
 public class Bolsa {
     private int totalFichas;

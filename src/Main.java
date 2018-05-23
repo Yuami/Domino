@@ -1,4 +1,4 @@
-import Partida.Bolsa;
+import Partida.Fichas.Bolsa;
 
 public class Main {
 
