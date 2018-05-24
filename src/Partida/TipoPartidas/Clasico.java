@@ -3,7 +3,11 @@ package Partida.TipoPartidas;
 import Partida.Fichas.Bolsa;
 import Partida.Fichas.Ficha;
 import Partida.Jugadores.Equipo;
+import Partida.Jugadores.Jugador;
 import Partida.Jugadores.Modalidad;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Clasico extends Partida {
 
@@ -19,8 +23,14 @@ public class Clasico extends Partida {
     }
 
     @Override
-    public void inicioJuego() {
+    public void saque() {
+        Equipo[] equipos = getEquipos();
+        List<Jugador[]> jugadors = new ArrayList<>();
 
+        for (Equipo equipo : equipos)
+            jugadors.add(equipo.getJugadores());
+
+        for (Jugador)
     }
 
     @Override
@@ -30,10 +40,7 @@ public class Clasico extends Partida {
 
     @Override
     public void start() {
-        Equipo[] equipos = getEquipos();
-        for (Equipo equipo : equipos) {
-            System.out.println(Bolsa.printFichas(equipo.getJugadores()[0].getFichas().toArray(new Ficha[0])));
-        }
+
     }
 
     @Override

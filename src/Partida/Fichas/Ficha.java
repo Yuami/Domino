@@ -1,20 +1,19 @@
 package Partida.Fichas;
 
 public class Ficha {
-    private Casilla[] ficha = new Casilla[2];
+    private final Casilla[] casillas = new Casilla[2];
     private boolean enMano = true;
+    private final boolean doble;
 
     public Ficha(Casilla top, Casilla bottom){
-        ficha[0] = top;
-        ficha[1] = bottom;
+        casillas[0] = top;
+        casillas[1] = bottom;
+
+        doble = casillas[0].getValor() == casillas[1].getValor();
     }
 
     public Casilla[] getFicha() {
-        return ficha;
-    }
-
-    public void setFicha(Casilla[] ficha) {
-        this.ficha = ficha;
+        return casillas;
     }
 
     public boolean isEnMano() {
@@ -25,8 +24,16 @@ public class Ficha {
         this.enMano = enMano;
     }
 
+    public int getValorTotal(){
+        return casillas[0].getValor() + casillas[1].getValor();
+    }
+
+    public boolean isDoble() {
+        return doble;
+    }
+
     @Override
     public String toString() {
-        return "[ " + ficha[0] + " | " + ficha[1] + " ]";
+        return "[ " + casillas[0] + " | " + casillas[1] + " ]";
     }
 }

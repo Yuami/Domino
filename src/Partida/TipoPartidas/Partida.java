@@ -18,6 +18,7 @@ public abstract class Partida {
     private int objetivo;
     private Ficha[][][] repartido;
     private int numeroEquipos;
+    private List<Ficha> extremos;
 
     public Partida(int maximoFichas, int objetivo) {
         this(4, maximoFichas, objetivo, Modalidad.PAREJAS);
@@ -34,11 +35,8 @@ public abstract class Partida {
 
         repartirFichas();
         generarEquipos();
-        inicioJuego();
         start();
     }
-
-    public abstract void inicioJuego();
 
     private void repartirFichas() {
         int fichasPorJugador = bolsa.getTotalFichas() / cantidadJugadores;
@@ -51,6 +49,7 @@ public abstract class Partida {
                 for (int k = 0; k < numeroEquipos; k++)
                     repartido[k][j][i] = bolsa.sacarFicha();
     }
+    public abstract void saque();
 
     public abstract void calcularPuntos();
 

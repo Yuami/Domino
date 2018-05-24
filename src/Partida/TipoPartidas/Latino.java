@@ -12,11 +12,6 @@ public class Latino extends Partida {
     }
 
     @Override
-    public void inicioJuego() {
-
-    }
-
-    @Override
     public void calcularPuntos() {
 
     }

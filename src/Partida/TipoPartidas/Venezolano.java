@@ -12,7 +12,7 @@ public class Venezolano extends Partida {
     }
 
     @Override
-    public void inicioJuego() {
+    public void saque() {
 
     }
 

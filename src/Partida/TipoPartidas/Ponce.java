@@ -11,11 +11,6 @@ public class Ponce extends Partida {
     }
 
     @Override
-    public void inicioJuego() {
-
-    }
-
-    @Override
     public void calcularPuntos() {
 
     }

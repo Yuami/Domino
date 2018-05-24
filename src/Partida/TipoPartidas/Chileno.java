@@ -11,11 +11,6 @@ public class Chileno extends Partida {
     }
 
     @Override
-    public void inicioJuego() {
-
-    }
-
-    @Override
     public void calcularPuntos() {
 
     }
